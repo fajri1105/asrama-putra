@@ -1,0 +1,563 @@
+
+:root{
+    --warnaUtama: rgb(141, 232, 133);
+    --warnaDuaHover: rgb(237, 178, 50);
+    --warnaDua: rgb(207, 142, 0);
+    --warnaTiga: rgba(0, 0, 0, 0.502);
+    --warnaGelap: rgb(0,0,0);
+    --warnaTerang: rgb(255, 255, 255);
+    --warnaEmpat: rgb(83, 83, 83);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+/* tombol atas */
+    .naik{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--warnaDua);
+        color: white;
+        text-align: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 9990;
+    }
+/* backgroud */
+.bg{
+    width: 100%;
+    height: 80vh;
+    background-image: url(IMG/Background/makan\ kerupuk.JPG);
+    background-size: cover;
+    background-position: center;
+}
+/* header */
+header{
+    width: 100%;
+    position: relative;
+    font-size: .8rem;
+    display: flex;
+    padding: .1rem 2rem;
+    background-color: var(--warnaTiga);
+    justify-content: space-between;
+    align-items: center;
+}
+header h3{
+    font-weight: normal;
+    color: white;
+}
+header ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: .2rem 0;
+}
+header ul li a{
+    margin: 0 .5rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+header ul li a img{
+    width: 20px;
+    margin: 0 .5em;
+}
+
+/* navbar */
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    background-color: var(--warnaTerang);
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li.header{
+    display: none;
+}
+nav ul li{
+    margin: 0 1em;
+}
+nav ul li a{
+    color: black;
+    font-weight: normal;
+    text-decoration: none;
+    border-left: 2px solid rgba(148, 102, 1, 0);
+    padding-left: .1em;
+}
+nav ul li a:hover, nav ul li a:focus-within{
+    transition: .5s;
+    border-left: 2px solid var(--warnaDua);
+}
+nav span.humberger{
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+nav span.humberger span{
+    width: 28px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 3px;
+
+}
+
+/* kolom sambutan */
+.sambutan{
+    width: 65vw;
+    background-color: var(--warnaUtama);
+    margin: auto;
+    box-shadow: 0 0 2px black;
+    margin-top: -6vh;
+    border-radius: 40px 0;
+    overflow: hidden;
+}
+.sambutan ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+}
+.sambutan ul li{
+    width: 100%;
+    background-color: var(--warnaTerang);
+    display: flex;
+    align-items: start;
+    padding: .5rem;
+}
+.sambutan ul li img{
+    height: 30px;
+    margin: 10px
+}
+.sambutan ul li h4{
+    color: var(--warnaGelap);
+    font-size: 1.2rem;
+}
+.sambutan ul li p{
+    color: var(--warnaEmpat)
+}
+.sambutan .main{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.sambutan .main img{
+    height: 200px;
+}
+.sambutan .main .isi{
+    padding-left: 2rem ;
+    text-align: justify;
+    color: var(--warnaEmpat);
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sambutan .main .isi .nama{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.sambutan .main .isi .jabatan{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .8rem;
+}
+
+/* Visi Misi */
+.visiMisi{
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.visiMisi .judul{
+    text-align: center;
+}
+.visiMisi .judul h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    padding: .2rem;
+    border-bottom: 4px solid var(--warnaDua);
+}
+.visiMisi .main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.visiMisi h3{
+    text-align: center;
+    font-size: 1.3rem;
+    padding: .5rem 0;
+}
+.visiMisi .main .visi{
+    flex: 1;
+}
+.visiMisi .main .misi{
+    flex: 1;
+    padding-left: 2em;
+}
+/* prestasi */
+.prestasi{
+    width: 100%;
+    background-color: var(--warnaEmpat);
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+}
+.prestasi .judul{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    text-align: left;
+    width: 200px;
+    display: inline-block;
+    color: var(--warnaTerang);
+    margin: auto;
+    padding: .2rem;
+    border-bottom: 4px solid var(--warnaDua);
+    margin-bottom: 1rem;
+}
+.prestasi .bungkus{
+    overflow-x: auto;
+}
+.prestasi .cards{
+    width: fit-content;
+    height: max-content;
+    display: flex;
+    gap: 1rem;
+}
+.prestasi .cards .card{
+    border-radius: 5px;
+    padding: 1rem;
+    width: 250px;
+    height: 290px;
+    background-color: var(--warnaTerang);
+}
+.prestasi .cards .card figure{
+    background-color: bisque;
+    margin: 0rem auto .5rem;
+    width: 100%;
+    height: 55%;
+    overflow: hidden;
+}
+.prestasi .cards .card figure img{
+    width: 100%;
+}
+.prestasi .cards .card h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.prestasi .cards .card p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .7rem;
+    color: var(--warnaEmpat);
+}
+.prestasi .cards .card.lainnya{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* artikel */
+.artikel {
+    width: 100%;
+    padding: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.artikel .judul{
+    border-bottom: 2px solid var(--warnaDua);
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.artikel .judul h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: .2rem;
+}
+.artikel .judul a{
+    color: var(--warnaGelap);
+    text-decoration: none;
+    padding: .2rem .4rem;
+    background-color: var(--warnaDua);
+    border-radius: 20px;
+}
+.artikel .judul a:hover{
+    background-color: var(--warnaDuaHover);
+}
+.artikel .cards{
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.artikel .cards .card{
+    display: flex;
+    width: 100%;
+    margin-top: .4rem;
+    margin-bottom: 1.5rem;
+}
+.artikel .cards .card figure{
+    flex: 1;
+    height: 80px;
+    background-color: var(--warnaDua);
+    margin-right: .5rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.artikel .cards .card figure img{
+    size: cover;
+}
+.artikel .cards .card .isi{
+    flex:4;
+}
+.artikel .cards .card p{
+    font-size: .8rem;
+    color: var(--warnaEmpat);
+}
+.artikel .cards .card .isi a{
+    cursor: pointer;
+    color: var(--warnaGelap);
+    text-decoration: none;
+}
+/* footer */
+footer{
+    background-image: url(IMG/Background/makan\ kerupuk.JPG);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--warnaTerang);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+footer .bgF{
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--warnaTiga);
+}
+footer h2{
+    position: relative;
+    z-index: 100;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    font: 2rem verdana, arial, helvetica, sans-serif;
+    font-weight: bold;
+}
+footer .main{
+    position: relative;
+    z-index: 100;
+    padding: 2rem;
+    display: flex;
+}
+footer .kiri{
+    flex: 3;
+    padding-right: .5rem;
+}
+footer .kiri iframe{
+    margin-top: 1rem;
+    width: 80%;
+    height: auto;
+}
+footer .kanan{
+    flex: 1;
+    padding-left: .5rem;
+    border-left: 1px solid white;
+}
+footer .kanan ul{
+    list-style-type: none;
+}
+footer .kanan ul li{
+    margin-bottom: 1rem;
+}
+footer .kanan ul li a{
+    color: white;
+    text-decoration: none;
+}
+footer .kanan ul.medsos{
+    display: flex;
+    align-items: center;
+}
+footer .kanan ul.medsos img{
+    width: 40px;
+    margin-right: 1rem;
+}
+
+
+@media screen and (max-width:768px) {
+    header h3{
+        display: none;
+    }
+    header ul{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .sambutan{
+        margin-top: -15vh;
+    }
+    .sambutan ul {
+        display: block;
+    }
+    .sambutan .main img{
+        display: none;
+    }
+    .sambutan .main .isi{
+        padding: 0;
+    }
+    .visiMisi{
+        width: 90%;
+    }
+    .artikel .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    footer .kiri iframe{
+        width: 80%;
+        height: auto;
+    }
+    footer .kanan ul.medsos img{
+        width: 20px;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    header{
+        padding: .1rem .2rem;
+    }
+    nav ul{
+        transition: 1s;
+        transform: translateX(100%);
+        display: block;
+        position: fixed;
+        padding: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 80%;
+        background-color: black;
+        z-index: 9999;
+    }
+    nav ul.active{
+        transform: translateX(0);
+    }
+    nav ul li{
+        margin: 0;
+    }
+    nav ul li.header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+        width: 100%;
+        background-color: var(--warnaDua);
+        margin-left: 0;
+    }
+    nav ul li.header .menu{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+    }
+    nav ul li.header .close{
+        padding: .2em .5em;
+        border: 1.5px solid white;
+        border-radius: 5px;
+        color: white;
+    }
+    nav ul li{
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        padding: 1rem 0;
+    }
+    nav ul li a{
+        color: var(--warnaTerang);
+    }
+    nav span.humberger{
+        display: flex;
+    }
+    .sambutan {
+        width: 90%;
+    }
+    .visiMisi .main{
+        display: block;
+    }
+    .visiMisi .main .visi{
+        text-align: center;
+    }
+    .visiMisi .main .misi{
+        padding: 0;
+    }
+    .visiMisi .main .misi ol{
+        padding-left: 1.5rem;
+    }
+    .prestasi .cards .card{
+        width: 180px;
+    }
+    .prestasi .cards .card figure{
+        margin: 0rem auto;
+    }
+    .artikel{
+        padding: .5rem;
+        padding-top: 1rem;
+    }
+    .artikel .judul{
+        display: block;
+        padding-bottom: .5rem;
+    }
+    .artikel .judul h2{ 
+        font-size: 1.5rem;
+        display: block;
+    }
+    .artikel .judul a{
+
+        text-align: center;
+        font-size: .7rem;
+        float: right;
+    }
+    .artikel .judul div.cf{
+        clear: both;
+    }
+    .artikel .cards .card{
+        justify-content: space-between;
+        width: 100%;
+    }
+    .artikel .cards .card figure{
+        flex:1;
+    }
+    .artikel .cards .card .isi{
+        flex: 2;
+    }
+    footer{
+        height: 100vh;
+    }
+    footer h2{
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    footer .main{
+        flex-direction: column-reverse;
+        padding: 1rem .8rem;
+    }
+    footer .main .kanan{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+}
